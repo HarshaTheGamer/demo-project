@@ -327,9 +327,8 @@ Route::post('smaap/AcceptReject','AndroidController@AcceptReject');
 Route::post('smaap/reg','AndroidController@zoneusers');
 Route::post('smaap/updateChatId', 'AndroidController@updateChatId');
 Route::post('smaap/sendfr','AndroidController@sendfr');
-Route::get('smaap/token',function(){
-return csrf_token();
-});
+
+
 
 Route::post('smaap/login', 'SmaapController@login');
 Route::get('smaap/logout','SmaapController@logout');
@@ -348,3 +347,7 @@ Route::post('smaap/uploadtogallery', 'AndroidWebController@uploadToGallery');
 
 
 Route::get('smaap/galleryImages', 'AndroidWebController@galleryImages');
+
+Route::get('smaap/token',function(){
+return csrf_token();
+});
